@@ -7,7 +7,7 @@ import io.cucumber.java.en.When;
 import java.util.List;
 import java.util.Map;
 
-public class StepDefs {
+public class Regex_Steps {
 
     @Then("^(?:validate|verify) (error|success|warning) \"([^\"]*)\" in \"([^\"]*)\" page$")
     public void verifyError(String type, String message, String page) {
