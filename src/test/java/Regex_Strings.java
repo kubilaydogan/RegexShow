@@ -29,7 +29,7 @@ public class Regex_Strings {
 
     }
 
-    @Given("^Me too need to be a ([a-zA-Z]*)$")
+    @Given("^you too need to be a ([a-zA-Z]*)$")
     public void needAstring2(String str) {
 
     }
@@ -39,7 +39,7 @@ public class Regex_Strings {
 
     }
 
-    @Given("^I like red colou?r$")
+    @Given("^I like (red|blue) colou?r$")
     public void likecolor(String color) {
         // colou?r matches colour or color
     }

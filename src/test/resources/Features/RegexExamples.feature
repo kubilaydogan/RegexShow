@@ -1,6 +1,5 @@
-@regex @hookless
+@cyberzoneusa.com
 Feature: Create step definitions using regular expressions (regex)
-
   Scenario: Regex for Integers and Strings
     Then "Account Name was successfully updated" success alert message should be displayed
     Then verify that the below mentioned columns should be displayed on "main" page
@@ -18,7 +17,7 @@ Feature: Create step definitions using regular expressions (regex)
       | contacts | First name is missing   | Your account is created successfully | This field is mandatory |
 
 
-  @DOGAN-16013 @hookless
+  @DOGAN
   Scenario Outline: DOGAN-16013 ....
     When "System Administrator" creates a "General Account" using below mentioned values
       | Company Name   | Account Status | Company Size   |
@@ -27,7 +26,6 @@ Feature: Create step definitions using regular expressions (regex)
     And I click a link "<Company Name>" on "Search Results" page
     And I click a button "View Details" on "Account" section
     And I click an icon "Change Owner" on "warning" popup
-
 
     Examples:
       | Company Name  | Company Size |
