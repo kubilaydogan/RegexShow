@@ -9,18 +9,18 @@ import java.util.Map;
 
 public class Regex_Steps {
 
-    @Then("^(?:validate|verify) (error|success|warning) \"([^\"]*)\" in \"([^\"]*)\" page$")
+    @Then("^(?:validate|verify) (error|success|warning) \"(.+)\" in \"(.+)\" page$")
     public void verifyError(String type, String message, String page) {
 
         switch(type){
             case ("error"):
-                //...
+
                 break;
             case ("success"):
-                //...
+
                 break;
             case ("warning"):
-                //...
+
                 break;
         }
     }
@@ -88,4 +88,11 @@ public class Regex_Steps {
         System.out.println(dataTable);
     }
 
+
+    @And("^I click on the \"(.+)\" (.+)$")
+    public void iClickOn(String name, String type) {
+    }
+//    @And("^I click on the \"(.+)\" (button|link|tab|icon)$")
+//    public void iClickOn(String name, String type) {
+//    }
 }

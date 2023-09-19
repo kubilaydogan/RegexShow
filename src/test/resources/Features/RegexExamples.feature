@@ -1,6 +1,9 @@
-@cyberzoneusa.com
-Feature: Create step definitions using regular expressions (regex)
+Feature: Using regular expressions (regex)
   Scenario: Regex for Integers and Strings
+
+    When I click on the "submit" button
+    When I click on the "new" link
+
     Then "Account Name was successfully updated" success alert message should be displayed
     Then verify that the below mentioned columns should be displayed on "main" page
       | Column Header                                              |
@@ -42,5 +45,4 @@ Feature: Create step definitions using regular expressions (regex)
       | destination |
       | Alaska      |
       | Sibiria     |
-
 
