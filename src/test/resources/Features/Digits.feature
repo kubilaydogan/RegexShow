@@ -1,11 +1,14 @@
-Feature: Regex Examples
+Feature: Regex examples for digits
 
   Scenario: Lets Try
-    Given I have 42 cookies
-    Given I have "33" cookies
-    Given status code is 404
+    Given company has 1 employee
+    Given company has 42 employees
+    Given company has "33" employees
     Given the deadline is in "2" weeks 3 days
 
-    Given I have 2 toys
-    Given I have a toy
-    Given I have not a toy
+    # API
+    Then status code is 404
+
+    Then verify table has 2 rows
+    Then verify table has a row
+    Then verify table has not a row
