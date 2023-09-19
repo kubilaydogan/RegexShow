@@ -1,4 +1,5 @@
 Feature: Using regular expressions (regex)
+
   Scenario: Regex for Integers and Strings
 
     When I click on the "submit" button
@@ -35,7 +36,7 @@ Feature: Using regular expressions (regex)
       | random string | 756          |
 
 
-  Scenario Outline: Master class
+  Scenario Outline: Combining Steps
     Given I have a bus ticket to "Mexico"
     Given I have not a flight ticket to "Miami"
     Given I have 2 bus tickets to "NYC"

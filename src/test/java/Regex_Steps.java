@@ -63,7 +63,7 @@ public class Regex_Steps {
     }
 
     @Then("^verify that the below mentioned (?:fields |columns |)should (|not )be displayed on \"(.+)\" page$")
-    public void verifyPageComponentsInPage(String visibility, String page, DataTable components) throws Exception {   // <<==
+    public void verifyPageComponentsInPage(String visibility, String page, DataTable components) {
 
         boolean flag = true;
         if(visibility.equalsIgnoreCase("not")){
