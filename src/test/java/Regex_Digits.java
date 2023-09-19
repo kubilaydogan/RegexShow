@@ -1,40 +1,38 @@
 import io.cucumber.java.en.Given;
-import jdk.swing.interop.SwingInterOpUtils;
+import io.cucumber.java.en.Then;
 
 public class Regex_Digits {
 
-    @Given("^I have (\\d+) cookies$")
-    public void iHaveCookies(int cookiesCount) {
-        //...
+    @Given("^company has (\\d+) employees?$")
+    public void company_has_employees(int count) {
+
     }
 
-    @Given("^I have \"(\\d+)\" cookies$")
-    public void iHaveCookies2(int cookiesCount) {
-        //...
+    @Given("^company has \"(\\d+)\" employees$")
+    public void company_has_employees(String count) {
+
     }
 
-    @Given("^status code is ([0-9]{3}+)$")
-    public void statusCode(int cukeCount) {
+    @Then("^status code is ([0-9]{3}+)$")
+    public void statusCode(int statusCode) {
         // Only 3 digits allowed
     }
 
     @Given("^the deadline is in \"(\\d+)\" weeks (\\d+) days$")
-    public void days(Integer n, Integer m) {
-        //...
+    public void days(int n, int m) {
+
     }
 
-    @Given("^I have (|(\\d+) |a )(|not a )toys?$")
-    public void ride(Integer count, String flag) {
+    @Then("^verify table has (|(\\d+))(|a|not a) rows?$")
+    public void verify_table_has_rows(Integer count, String flag) {
 
-        if (count == null) {
-            count=0;
+        if (flag.contentEquals("not a")) {
+            count = 0;
+        } else if (flag.contentEquals("a")) {
+            count = 1;
         }
-        if (flag.contentEquals("not a"))
-            flag = "false";
-        else
-            flag = "true";
-
-        System.out.println("Count: " + count + " flag: " + flag);
+        System.out.println("Count: " + count);
     }
 
 }
+
