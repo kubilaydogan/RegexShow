@@ -23,13 +23,13 @@ Feature: Using regular expressions (regex)
 
   @DOGAN
   Scenario Outline: DOGAN-16013 ....
-    When "System Administrator" creates a "General Account" using below mentioned values
+    When "System Administrator" creates a "Account" using below mentioned values
       | Company Name   | Account Status | Company Size   |
       | <Company Name> | Active         | <Company Size> |
 
     And I click a link "<Company Name>" on "Search Results" page
     And I click a button "View Details" on "Account" section
-    And I click an icon "Change Owner" on "warning" popup
+    And I click an icon "Change Owner" on "Warning" popup
 
     Examples:
       | Company Name  | Company Size |
