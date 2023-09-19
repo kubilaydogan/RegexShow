@@ -1,21 +1,6 @@
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
-/*
-        (.*)                String (don't use with "string")
-        ([a-zA-Z]*)         Only String (integers not allowed)
-        ([a-zA-Z0-9]*       Only String or Integers (no special characters)
-        \"([a-zA-Z]*)\"     Only "String"
-        \"([^\"]*)\"        "..."
-        \"(.+)\"           "..."
-
-        (|not )             empty or not
-        (?:...|...)         You can see these options, but they are not parameters  ==> (?:validate|verify)
-        (error|success|warning)     ==> parameter can take 3 values
-
-        an?	matches a or an (the question mark makes the n optional)
-        colou?r matches colour or color
- */
 
 public class Regex_Strings {
 
@@ -24,13 +9,13 @@ public class Regex_Strings {
 
     }
 
-    @Given("^I need to be a \"([a-zA-Z]*)\"$")
-    public void needAstring(String str) {
+    @Then("^the value needs to be a \"([a-zA-Z]*)\"$")
+    public void the_value_needs_to_be_a(String string) {
 
     }
 
-    @Given("^you too need to be a ([a-zA-Z]*)$")
-    public void needAstring2(String str) {
+    @Then("^the value has to be a ([a-zA-Z]*)$")
+    public void the_value_has_to_be_a(String string) {
 
     }
 
@@ -43,11 +28,5 @@ public class Regex_Strings {
     public void likecolor(String color) {
         // colou?r matches colour or color
     }
-
-
-
-
-
-//   \"([^\"]*)\"
 
 }
